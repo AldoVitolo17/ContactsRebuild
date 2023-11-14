@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isModalPresented = false
+    let alphabet = Array(arrayLiteral: "a"..."z")
     var body: some View {
         NavigationStack{
             List{
@@ -22,6 +23,9 @@ struct ContentView: View {
                         Text("La mia scheda")
                             .font(.footnote)
                     }
+                }
+                Section("A"){
+                    
                 }
             }
             .listStyle(.plain)
@@ -43,7 +47,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $isModalPresented, content: {
-               NewContactView()
+                NewContactView()
             })
         }
         

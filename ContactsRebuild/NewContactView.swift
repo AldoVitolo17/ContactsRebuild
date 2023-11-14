@@ -21,7 +21,11 @@ struct NewContactView: View {
                         Text("Fine")
                     })
                 }
-                
+                ToolbarItem(placement: .topBarLeading){
+                    Button(action: {}, label: {
+                        Text("Annulla")
+                    })
+                }
             }
         }
     }
